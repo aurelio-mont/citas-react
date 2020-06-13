@@ -1,8 +1,8 @@
 import React from "react";
 
-const Cita = ({ cita }) => {
+const Cita = ({ cita, eliminarCita }) => {
   //Extraer los valores de las variables
-  const { mascota, propietario, fecha, hora, sintomas } = cita;
+  const { mascota, propietario, fecha, hora, sintomas, id } = cita;
   return (
     <div className="cita">
       <p>
@@ -18,8 +18,12 @@ const Cita = ({ cita }) => {
         Hora <span>{hora}</span>
       </p>
       <p>
-      Sintomas <span>{sintomas}</span>
+        Sintomas <span>{sintomas}</span>
       </p>
+      <button
+        className="button eliminar u-full-width"
+        onClick={ () => eliminarCita(id) }
+      >Eliminar &times;</button>
     </div>
   );
 };
