@@ -9,7 +9,7 @@ const Formulario = ({crearCita}) => {
     propietario: "",
     fecha: "",
     hora: "",
-    sintomas: "",
+    sintomas: ""
   });
 
   //funcion que seejecuta cada que el usuario escribe
@@ -49,6 +49,13 @@ const Formulario = ({crearCita}) => {
     crearCita(cita);
 
     // Reiniciar Form
+    actualizarCita({
+        mascota: "",
+        propietario: "",
+        fecha: "",
+        hora: "",
+        sintomas: ""
+    });
   };
 
   return (
